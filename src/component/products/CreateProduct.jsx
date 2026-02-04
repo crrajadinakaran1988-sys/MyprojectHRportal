@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 // product creation related constants and component
 const Sex = ["Male","Female"];
 const Month = ["01","02","03","04","05","06","07","08","09","10","11","12"];
-const Date = ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"];
+const c_Date = ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"];
 const Year = ["1900"];
 const BRANDS = ["TechNova", "Apple", "Samsung", "OnePlus"];
 const CATEGORIES = {
@@ -24,6 +24,14 @@ export default function CreateProduct() {
     const dispatch = useDispatch();
     const [product, setProduct] = useState({
         name: "",
+        /*lastname: "",
+        sex: "",
+        month: "",	
+        date: "",	
+        year: "",
+        address: "",
+        phnumber: "",
+        emailid: "",*/
         brand: "",
         category: "",
         subCategory: "",
@@ -183,7 +191,7 @@ export default function CreateProduct() {
                     <div>
                     <label className="block text-sm font-medium mb-1">Sex</label>
                         <select
-                            name="sex"
+                            name="s_sex"
                             className={inputClass}
                             onChange={handleChange}
                             required
@@ -209,18 +217,18 @@ export default function CreateProduct() {
                                 ))}
                         </select>
                         <select
-                            name="date"
+                            name="s_date"
                             className={inputClass}
                             onChange={handleChange}
                             required
                         >
                             <option value="">Date</option>
-                                {Date.map((b) => (
+                                {c_Date.map((b) => (
                                     <option key={b}>{b}</option>
                                 ))}
                         </select>
                         <select
-                            name="year"
+                            name="s_year"
                             className={inputClass}
                             onChange={handleChange}
                             required

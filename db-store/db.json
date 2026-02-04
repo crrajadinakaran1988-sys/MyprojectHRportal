@@ -140,6 +140,37 @@
       "rating": 0,
       "reviewCount": 0,
       "createdAt": "2026-01-23T03:15:05.560Z"
+    },
+    {
+      "id": "8597",
+      "name": "Name",
+      "brand": "Apple",
+      "category": "Electronics",
+      "subCategory": "Accessories",
+      "price": 400,
+      "discountPercentage": 10,
+      "stock": 10,
+      "description": "Test",
+      "highlights": [
+        ""
+      ],
+      "specifications": {},
+      "warranty": "",
+      "deliveryEstimate": "",
+      "tags": [],
+      "lastname": "LName",
+      "s_sex": "Male",
+      "month": "01",
+      "s_date": "01",
+      "s_year": "1900",
+      "address": "123",
+      "phnumber": "1234567890",
+      "emailid": "admin@gmail.com",
+      "discountedPrice": 360,
+      "availabilityStatus": "In Stock",
+      "rating": 0,
+      "reviewCount": 0,
+      "createdAt": "2026-02-04T06:40:53.429Z"
     }
   ],
   "users": [

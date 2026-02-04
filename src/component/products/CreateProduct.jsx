@@ -4,6 +4,10 @@ import { createNewProduct } from "../../redux/productReducer";
 import { useDispatch } from "react-redux";
 
 // product creation related constants and component
+const Sex = ["Male","Female"];
+const Month = ["01","02","03","04","05","06","07","08","09","10","11","12"];
+const Date = ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"];
+const Year = ["1900"];
 const BRANDS = ["TechNova", "Apple", "Samsung", "OnePlus"];
 const CATEGORIES = {
     Electronics: ["Mobile Phones", "Laptops", "Accessories"],
@@ -112,10 +116,10 @@ export default function CreateProduct() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div className="lg:col-span-2">
-                            <label className="block text-sm font-medium mb-1">Product Name</label>
+                            <label className="block text-sm font-medium mb-1">Employee First Name</label>
                             <input
                                 name="name"
-                                placeholder="Apple Mini Smart Watch"
+                                placeholder="Employee First Name"
                                 className={inputClass}
                                 onChange={handleChange}
                                 required
@@ -138,6 +142,14 @@ export default function CreateProduct() {
                         </div>
 
                         <div>
+                            <label className="block text-sm font-medium mb-1">Employee Last Name</label>
+                            <input
+                                name="lastname"
+                                placeholder="Employee Last Name"
+                                className={inputClass}
+                                onChange={handleChange}
+                                required
+                            />
                             <label className="block text-sm font-medium mb-1">Category</label>
                             <select
                                 name="category"
@@ -168,12 +180,64 @@ export default function CreateProduct() {
                             </select>
                         </div>
                     </div>
+                    <div>
+                    <label className="block text-sm font-medium mb-1">Sex</label>
+                        <select
+                            name="sex"
+                            className={inputClass}
+                            onChange={handleChange}
+                            required
+                        >
+                            <option value="">Select Sex</option>
+                                {Sex.map((b) => (
+                                    <option key={b}>{b}</option>
+                                ))}
+                            
+                        </select>
+                    </div>
+                    <div>
+                    <label className="block text-sm font-medium mb-1">DOB</label>
+                        <select
+                            name="month"
+                            className={inputClass}
+                            onChange={handleChange}
+                            required
+                        >
+                            <option value="">Month</option>
+                                {Month.map((b) => (
+                                    <option key={b}>{b}</option>
+                                ))}
+                        </select>
+                        <select
+                            name="date"
+                            className={inputClass}
+                            onChange={handleChange}
+                            required
+                        >
+                            <option value="">Date</option>
+                                {Date.map((b) => (
+                                    <option key={b}>{b}</option>
+                                ))}
+                        </select>
+                        <select
+                            name="year"
+                            className={inputClass}
+                            onChange={handleChange}
+                            required
+                        >
+                        <option value="">Year</option>
+                                {Year.map((b) => (
+                                    <option key={b}>{b}</option>
+                                ))}
+                            
+                        </select>
+                    </div>
                 </section>
 
                 {/* PRICING */}
                 <section>
                     <h3 className="text-lg font-semibold text-gray-800 mb-1">
-                        Pricing & Stock
+                        Communication details
                     </h3>
                     <p className="text-sm text-gray-500 mb-6">
                         Control product pricing and availability
@@ -181,6 +245,32 @@ export default function CreateProduct() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div>
+                            <label className="block text-sm font-medium mb-1">Address (#)</label>
+                                <input
+                                    name="address"
+                                    placeholder="Address"
+                                    className={inputClass}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            <label className="block text-sm font-medium mb-1">Phone number (#)</label>
+                                <input
+                                    name="phnumber"
+                                    type="number"
+                                    placeholder="Phone number"
+                                    className={inputClass}
+                                    onChange={handleChange}
+                                    required
+                                />  
+                            <label className="block text-sm font-medium mb-1">Email Id</label>
+                                <input
+                                    name="emailid"
+                                    type="email"
+                                    placeholder="Email Id"
+                                    className={inputClass}
+                                    onChange={handleChange}
+                                    required
+                                />       
                             <label className="block text-sm font-medium mb-1">Price ($)</label>
                             <input
                                 name="price"

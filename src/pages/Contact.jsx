@@ -6,7 +6,7 @@ export default function Contact() {
                 
                 {/* HEADER */}
                 <header style={styles.header}>
-                  <h1 style={styles.title}>Fullstack Development Solutions</h1>
+                  <h1 style={styles.title}>Fullstack Dev Solutions</h1>
                   <p style={styles.subtitle}>
                     End-to-end web, mobile & cloud solutions built with modern technologies.
                   </p>
@@ -38,9 +38,9 @@ export default function Contact() {
                 <section style={styles.section}>
                   <h2 style={styles.sectionTitle}>Contact Us</h2>
                   <div style={styles.contactBox}>
-                    <p><strong>📞 Phone:</strong> +91 8107186985</p>
-                    <p><strong>📧 Email:</strong> services@fullstacksolution.net</p>
-                    <p><strong>📍 Location:</strong> Jaipur, Rajasthan, India</p>
+                    <p><strong>📞 Phone:</strong> 1800 107 186</p>
+                    <p><strong>📧 Email:</strong> contact@fullstacksolution.net</p>
+                    <p><strong>📍 Location:</strong> US, UK, India</p>
                   </div>
                 </section>
         

@@ -20,6 +20,7 @@ import Profile from './component/Profile'
 import UnAuth from './pages/error/UnAuth'
 import RoleGuard from './component/auth/RoleGuard'
 import AdminDashboard from './component/AdminDashboard'
+import CreateEmployee from './component/CreateEmployee'
 import CartList from './component/cart/CartList'
 import CreateProduct from './component/products/CreateProduct'
 import UpdateProduct from './component/products/UpdateProduct'
@@ -53,7 +54,8 @@ function App() {
                   <Route path="/admin" element={
                   <AuthGuard>
                       <RoleGuard allowedRoles={['admin']}>
-                        <AdminDashboard />
+                        {/*<AdminDashboard />*/}
+                        <CreateEmployee />  
                       </RoleGuard>
                   </AuthGuard>
                   } />

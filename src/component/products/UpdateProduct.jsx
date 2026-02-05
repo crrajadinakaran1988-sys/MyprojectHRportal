@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { clearSelectedProduct, fetchProductById,  updateExistingProduct} from "../../redux/productReducer";
+import { clearSelectedProduct, fetchProductById, updateExistingProduct } from "../../redux/productReducer";
 
 /* constants */
+const Sex = ["Male", "Female"];
+const Month = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
+const c_Date = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
+const Year = ["1900"];
 const BRANDS = ["TechNova", "Apple", "Samsung", "OnePlus"];
 const CATEGORIES = {
   Electronics: ["Mobile Phones", "Laptops", "Accessories"],
@@ -30,8 +34,8 @@ export default function UpdateProduct() {
   /* ---------- FETCH PRODUCT ---------- */
   useEffect(() => {
     dispatch(fetchProductById(id));
-     return () => {
-        dispatch(clearSelectedProduct());
+    return () => {
+      dispatch(clearSelectedProduct());
     };
   }, [id, dispatch]);
 
@@ -71,9 +75,9 @@ export default function UpdateProduct() {
   const discountedPrice =
     product?.price && product?.discountPercentage
       ? (
-          product.price -
-          (product.price * product.discountPercentage) / 100
-        ).toFixed(2)
+        product.price -
+        (product.price * product.discountPercentage) / 100
+      ).toFixed(2)
       : product?.price;
 
   /* ---------- SUBMIT ---------- */
@@ -91,7 +95,7 @@ export default function UpdateProduct() {
       updatedAt: new Date().toISOString(),
     };
 
-    dispatch(updateExistingProduct( id, payload ));
+    dispatch(updateExistingProduct(id, payload));
     navigate("/products");
   };
 
@@ -139,86 +143,108 @@ export default function UpdateProduct() {
                 required
               />
             </div>
-
             <div>
-              <label className="block text-sm font-medium mb-1">Brand</label>
-              <select
-                name="brand"
-                value={product.brand}
+              <label className="block text-sm font-medium mb-1">Employee Last Name</label>
+              <input
+                name="lastname"
+                value={product.lastname}
                 className={inputClass}
                 onChange={handleChange}
-              >
-                {BRANDS.map((b) => (
-                  <option key={b}>{b}</option>
-                ))}
-              </select>
+                required
+              />
+
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1">Category</label>
+              <label className="block text-sm font-medium mb-1">Sex</label>
               <select
-                name="category"
-                value={product.category}
+                name="s_sex"
+                value={product.s_sex}
                 className={inputClass}
                 onChange={handleChange}
+                required
               >
-                {Object.keys(CATEGORIES).map((c) => (
-                  <option key={c}>{c}</option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-1">
-                Sub Category
-              </label>
-              <select
-                name="subCategory"
-                value={product.subCategory}
-                className={inputClass}
-                onChange={handleChange}
-              >
-                {CATEGORIES[product.category]?.map((s) => (
+                <option value="">Select Sex</option>
+                {Sex.map((s) => (
                   <option key={s}>{s}</option>
                 ))}
               </select>
             </div>
+            <div>
+              <label className="block text-sm font-medium mb-1">DOB</label>
+              <select
+                name="month"
+                value={product.month}
+                className={inputClass}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Month</option>
+                {Month.map((s) => (
+                  <option key={s}>{s}</option>
+                ))}
+              </select>
+              <select
+                name="s_date"
+                value={product.s_date}
+                className={inputClass}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Date</option>
+                {c_Date.map((s) => (
+                  <option key={s}>{s}</option>
+                ))}
+              </select>
+              <select
+                name="s_year"
+                value={product.s_year}
+                className={inputClass}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Year</option>
+                {Year.map((s) => (
+                  <option key={s}>{s}</option>
+                ))}
+
+              </select>
+            </div>
+
           </div>
         </section>
 
-        {/* PRICING */}
+        {/* Communication details */}
         <section>
           <h3 className="text-lg font-semibold mb-6">
-            Pricing & Stock
+            Communication details
           </h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <input
-              name="price"
-              type="number"
-              value={product.price}
-              className={inputClass}
-              onChange={handleChange}
-            />
-            <input
-              name="discountPercentage"
-              type="number"
-              value={product.discountPercentage}
-              className={inputClass}
-              onChange={handleChange}
-            />
-            <input
-              name="stock"
-              type="number"
-              value={product.stock}
-              className={inputClass}
-              onChange={handleChange}
-            />
-          </div>
-
-          <p className="mt-2 text-green-600 font-semibold">
-            Discounted Price: ${discountedPrice}
-          </p>
+          <label className="block text-sm font-medium mb-1">Address (#)</label>
+          <input
+            name="address"
+            value={product.address}
+            className={inputClass}
+            onChange={handleChange}
+            required
+          />
+          <label className="block text-sm font-medium mb-1">Phone number (#)</label>
+          <input
+            name="phnumber"
+            type="number"
+            value={product.phnumber}
+            className={inputClass}
+            onChange={handleChange}
+            required
+          />
+          <label className="block text-sm font-medium mb-1">Email Id</label>
+          <input
+            name="emailid"
+            type="email"
+            value={product.emailid}
+            className={inputClass}
+            onChange={handleChange}
+            required
+          />
         </section>
 
         {/* DESCRIPTION */}
@@ -236,16 +262,7 @@ export default function UpdateProduct() {
           />
 
           <div className="mt-4 space-y-3">
-            {product.highlights.map((h, i) => (
-              <input
-                key={i}
-                value={h}
-                className={inputClass}
-                onChange={(e) =>
-                  handleHighlightChange(i, e.target.value)
-                }
-              />
-            ))}
+
             <button
               type="button"
               onClick={addHighlight}

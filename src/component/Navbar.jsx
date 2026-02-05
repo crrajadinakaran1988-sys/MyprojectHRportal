@@ -44,12 +44,12 @@ export default function Navbar() {
                         <NavLink to="/" className="{linkCass}">
                             <i className="fas fa-home mr-1"></i>{t.home}
                         </NavLink>
-                         <NavLink to="/dashboard" className="{linkCass}">
+                         {/*<NavLink to="/dashboard" className="{linkCass}">
                             <i className="fas fa-home mr-1"></i>{t.dashboard}
                         </NavLink>
                          <NavLink to="/profile" className="{linkCass}">
                             <i className="fas fa-user mr-1"></i>{t.profile}
-                        </NavLink>
+                        </NavLink>*/}
                          <NavLink to="/about" className="{linkCass}">
                             <i className="fas fa-info-circle mr-1"></i>{t.about}
                         </NavLink>

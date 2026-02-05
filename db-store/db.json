@@ -204,6 +204,37 @@
       "reviewCount": 0,
       "createdAt": "2026-02-05T07:11:44.347Z",
       "updatedAt": "2026-02-05T07:12:20.968Z"
+    },
+    {
+      "id": "e9d6",
+      "name": "FName3",
+      "brand": "",
+      "category": "",
+      "subCategory": "",
+      "price": 0,
+      "discountPercentage": 0,
+      "stock": 0,
+      "description": "Fname3 details",
+      "highlights": [
+        ""
+      ],
+      "specifications": {},
+      "warranty": "",
+      "deliveryEstimate": "",
+      "tags": [],
+      "lastname": "LName3",
+      "s_sex": "Male",
+      "month": "04",
+      "s_date": "04",
+      "s_year": "1900",
+      "address": "123 Pico",
+      "phnumber": "2134567890",
+      "emailid": "FName3@gmail.com",
+      "discountedPrice": 0,
+      "availabilityStatus": "Out of Stock",
+      "rating": 0,
+      "reviewCount": 0,
+      "createdAt": "2026-02-05T21:18:07.773Z"
     }
   ],
   "users": [

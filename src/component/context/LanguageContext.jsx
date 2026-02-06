@@ -5,7 +5,7 @@ export const LanguageContext = createContext();
 const transilations = {
   en: {
     welcome: "Fullstack Dev Solutions",
-    description: "New update is live. Check it out! Your online store for everything",
+    description: "Welcome to Fullstack Dev Solutions, HR Portal",
     home: "Home",
     dashboard: "Dashboard",
     profile: "Profile",
@@ -15,14 +15,14 @@ const transilations = {
     cart: "Cart",
   },
   es: {
-    welcome: "Fullstack Dev Solutions",
-    description: "Nueva actualización en vivo. ¡Échale un vistazo! Tu tienda en línea para todo",
+    welcome: "Soluciones de desarrollo fullstack",
+    description: "Bienvenido a Fullstack Dev Solutions, Portal de RR.HH",
     home: "Inicio",
     dashboard: "Tablero",
     profile: "Perfil",
     about: "Acerca de",
     contact: "Contacto",
-    products: "Productos",
+    products: "Panel de control de recursos humanos",
     cart: "Carrito",
   },
   hi : {

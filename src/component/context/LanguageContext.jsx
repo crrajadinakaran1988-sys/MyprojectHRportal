@@ -11,7 +11,7 @@ const transilations = {
     profile: "Profile",
     about: "About",
     contact: "Contact",
-    products: "Products",
+    products: "HR Dashboard",
     cart: "Cart",
   },
   es: {

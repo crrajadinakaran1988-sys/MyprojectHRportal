@@ -80,7 +80,7 @@ export default function CreateProduct() {
     // form submission handler
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        e.target.reset();
         const payload = {
             ...product,
             price: Number(product.price),
@@ -99,6 +99,7 @@ export default function CreateProduct() {
 
         console.log("CREATE PRODUCT PAYLOAD", payload);
         //navigate("/products");
+        
     };
     const inputClass = "w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none";
 
@@ -268,7 +269,7 @@ export default function CreateProduct() {
                         onClick={() => navigate("/products")}
                         className="px-6 py-2.5 rounded-lg border text-gray-600 hover:bg-gray-100"
                     >
-                        Cancel
+                        Clear
                     </button>
 
                     <button

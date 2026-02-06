@@ -65,9 +65,9 @@ export default function Navbar() {
                             <NavLink to="/login" className="{linkCass}">
                                 <i className="fas fa-user mr-1"></i>Login
                             </NavLink>
-                            <NavLink to="/register" className="{linkCass}">
+                            {/*<NavLink to="/register" className="{linkCass}">
                                 <i className="fas fa-user mr-1"></i>Register
-                            </NavLink>
+                            </NavLink>*/}
                             </>
                         )}
 

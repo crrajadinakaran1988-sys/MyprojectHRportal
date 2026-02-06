@@ -54,8 +54,9 @@ function App() {
                   <Route path="/admin" element={
                   <AuthGuard>
                       <RoleGuard allowedRoles={['admin']}>
-                        {/*<AdminDashboard />*/}
-                        <CreateEmployee />  
+                        {/*<AdminDashboard />
+                        <CreateEmployee />  */}
+                        <ProductList/>
                       </RoleGuard>
                   </AuthGuard>
                   } />
@@ -63,7 +64,8 @@ function App() {
                   <Route path="/profile" element={
                   <AuthGuard>
                       <RoleGuard allowedRoles={['user']}>
-                        <Profile />
+                        {/*<Profile />*/}
+                        <CreateEmployee />
                       </RoleGuard>
                   </AuthGuard>
                   } />

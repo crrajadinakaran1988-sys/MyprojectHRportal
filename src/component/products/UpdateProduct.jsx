@@ -113,10 +113,10 @@ export default function UpdateProduct() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <h2 className="text-3xl font-bold text-gray-800 mb-2 text-center">
-        Edit Product
+        Edit Employee Details
       </h2>
       <p className="text-center text-gray-500 mb-10">
-        Product ID: <span className="font-mono">{id}</span>
+        Employee ID: <span className="font-mono">{id}</span>
       </p>
 
       <form
@@ -287,7 +287,7 @@ export default function UpdateProduct() {
             type="submit"
             className="px-8 py-2.5 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700"
           >
-            Update Product
+            Update Employee
           </button>
         </div>
       </form>

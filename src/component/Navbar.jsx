@@ -56,9 +56,9 @@ export default function Navbar() {
                          <NavLink to="/contact" className="{linkCass}">
                             <i className="fas fa-envelope mr-1"></i>{t.contact}
                         </NavLink>
-                        <NavLink to="/products" className="{linkCass}">
+                        {/*<NavLink to="/products" className="{linkCass}">
                             <i className="fas fa-boxes mr-1"></i>{t.products}
-                        </NavLink>
+                        </NavLink>*/}
                         
                         {!isLoggedIn && (
                             <>
